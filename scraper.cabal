@@ -4,13 +4,13 @@
 name:                scraper
 version:             0.1.0.0
 synopsis:            EDSL for scraping web pages into an epub.
--- description:         
+description:         EDSL for scraping web pages into an epub.
 license:             Apache-2.0
 license-file:        LICENSE
 author:              Eric Rochester
 maintainer:          erochest@gmail.com
 -- copyright:           
--- category:            
+category:            Text
 build-type:          Simple
 -- extra-source-files:  
 cabal-version:       >=1.10
@@ -20,8 +20,15 @@ library
   -- other-modules:       
   -- other-extensions:    
   build-depends:       base >=4.7 && <4.8
+                     , free
+                     , lens
+                     , pandoc
+                     , text
+                     , trifecta
+                     , wreq
   -- hs-source-dirs:      
   default-language:    Haskell2010
+
 executable scraper
   main-is:             Main.hs
   -- other-modules:       
@@ -51,4 +58,5 @@ test-suite scraper-specs
 
 source-repository this
   type:                git
+  tag:                 master
   location:            git://github.com/erochest/scraper.git
