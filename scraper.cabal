@@ -16,10 +16,11 @@ build-type:          Simple
 cabal-version:       >=1.10
 
 library
-  -- exposed-modules:     
+  exposed-modules:     
+                       Scraper.Types
   -- other-modules:       
   -- other-extensions:    
-  build-depends:       base >=4.7 && <4.8
+  build-depends:       base >=4.7 && <5
                      , free
                      , lens
                      , pandoc
@@ -33,7 +34,7 @@ executable scraper
   main-is:             Main.hs
   -- other-modules:       
   -- other-extensions:    
-  build-depends:       base >=4.7 && <4.8
+  build-depends:       base >=4.7 && <5
                      , scraper
                      , text
                      , optparse-applicative
@@ -46,7 +47,7 @@ test-suite scraper-specs
   ghc-options:         -threaded -rtsopts
   hs-source-dirs:      specs
   main-is:             Specs.hs
-  build-depends:         base       == 4.7.*
+  build-depends:         base
                        , QuickCheck
                        , smallcheck
                        , hspec
